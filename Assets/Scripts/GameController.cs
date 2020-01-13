@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     SaveLoadScript Saveload;
-    [SerializeField] GameObject _targetObject;
+    GameObject _targetObject;
     CameraController _camera;
 
     void Start()
@@ -23,7 +23,6 @@ public class GameController : MonoBehaviour
 
     public GameObject GetTargetObject()
     {
-        print(_targetObject);
         return _targetObject;
     }
 

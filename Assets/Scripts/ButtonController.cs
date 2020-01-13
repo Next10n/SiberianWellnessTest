@@ -6,18 +6,14 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
 
-    [SerializeField] GameController _gameController;
+    GameController _gameController;
 
-    void Start()
+    private void Awake()
     {
         _gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
 
-    private void Update()
-    {
-       // SetButtonText();
-    }
 
     //проверяем цвет кнопки с цветом текущей выбранной фигуры
     public void SetButtonText()
@@ -34,9 +30,6 @@ public class ButtonController : MonoBehaviour
 
     public GameObject GetFollowObject()
     {
-        print(_gameController.GetTargetObject());
-
-        
         return _gameController.GetTargetObject();
     }
 
